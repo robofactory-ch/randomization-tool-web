@@ -26,7 +26,7 @@ export default function Junior2023() {
     </>
   );
   function getRandomState() {
-    const broken = rand(0, 3);
+    const broken = rand(1, 4);
 
     const ind1Bag = new MarbleBag([1, 2, 3, 4]);
     const ind2Bag = new MarbleBag([1, 2, 3, 4]);
