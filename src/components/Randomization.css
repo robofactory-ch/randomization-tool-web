@@ -1,0 +1,18 @@
+.overflow-scroll {
+  overflow-x: scroll;
+}
+.rand-wrapper {
+  width: 1000px;
+  height: 485px;
+  margin: 0 auto;
+  position: relative;
+}
+.field-image,
+.rand-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rand-image {
+  z-index: 10;
+}
