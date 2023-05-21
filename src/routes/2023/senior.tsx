@@ -6,15 +6,9 @@ import Senior2023 from "~/components/Senior_2023";
 export default function Home() {
   return (
     <main>
-      <Title>Randomizations</Title>
+      <Title>Senior Randomizations</Title>
       <h1>Senior</h1>
       <Senior2023 />
-      <hr></hr>
-      <h1>Junior</h1>
-      <Junior2023 />
-      <hr></hr>
-      <h1>Elementary</h1>
-      <Elementary2023 />
     </main>
   );
 }

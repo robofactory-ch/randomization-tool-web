@@ -12,6 +12,10 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
+        <A href="/">All</A>
+        <A href="/2023/elementary">Elementary</A>
+        <A href="/2023/junior">Junior</A>
+        <A href="/2023/senior">Senior</A>
         <Suspense>
           <ErrorBoundary>
             <Routes>

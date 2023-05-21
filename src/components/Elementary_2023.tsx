@@ -16,13 +16,16 @@ export default function Elementary2023() {
   );
   return (
     <>
+      <button class="generate-button" onClick={() => getRandomState()}>
+        GENERATE
+      </button>
       <div class="overflow-scroll">
         <div class="rand-wrapper">
           <img class="field-image" src="/2023/Elementary-2D.jpg" alt="Elementary Game Field" width={1000} />
           {svg}
         </div>
       </div>
-      {state()}
+      <p class="code">{state()}</p>
     </>
   );
   function getRandomState() {

@@ -16,13 +16,16 @@ export default function Senior2023() {
   );
   return (
     <>
+      <button class="generate-button" onClick={() => setState(getRandomState())}>
+        GENERATE
+      </button>
       <div class="overflow-scroll">
         <div class="rand-wrapper">
           <img class="field-image" src="/2023/Senior-2D.jpg" alt="Senior Game Field" width={1000} />
           {svg}
         </div>
       </div>
-      {state()}
+      <p class="code">{state()}</p>
     </>
   );
   function getRandomState() {
