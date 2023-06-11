@@ -5,7 +5,7 @@ export default function Elementary2023() {
   const [state, setState] = createSignal("");
   if (state() === "") getRandomState();
   const svg = (
-    <svg class="rand-image" height="485" width="1000">
+    <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       {isVisible(state(), 0) && <rect width="32" height="32" x="212" y="12" fill="red" stroke="#000" stroke-width={4} />}
       {isVisible(state(), 1) && <rect width="32" height="32" x="655" y="12" fill="white" stroke="#000" stroke-width={4} />}
       {isVisible(state(), 2) && <rect width="32" height="32" x="212" y="430" fill="black" stroke="#fff" stroke-width={4} />}

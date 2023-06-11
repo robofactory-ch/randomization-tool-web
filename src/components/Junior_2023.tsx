@@ -5,7 +5,7 @@ export default function Junior2023() {
   const [state, setState] = createSignal(getRandomState());
   if (state() === "") getRandomState();
   const svg = (
-    <svg class="rand-image" height="485" width="1000">
+    <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       <rect width="16" height="16" x="15" y={offsetForInd1(state(), 1)} fill="#000" stroke="#fff" />
       <rect width="16" height="16" x="15" y={offsetForInd1(state(), 3)} fill="#fff" stroke="#000" />
       <rect width="16" height="16" x="15" y={offsetForInd2(state(), 1)} fill="#000" stroke="#fff" />

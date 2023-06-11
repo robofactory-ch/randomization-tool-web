@@ -2,8 +2,7 @@
   overflow-x: scroll;
 }
 .rand-wrapper {
-  width: 1000px;
-  height: 485px;
+  width: clamp(350px, 90vw, 1000px);
   margin: 0 auto;
   position: relative;
 }
@@ -12,6 +11,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: clamp(350px, 90vw, 1000px);
+  height: auto;
 }
 .rand-image {
   z-index: 10;
