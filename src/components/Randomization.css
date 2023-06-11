@@ -3,6 +3,7 @@
 }
 .rand-wrapper {
   width: clamp(350px, 90vw, 1000px);
+  height: 485px;
   margin: 0 auto;
   position: relative;
 }
