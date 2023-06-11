@@ -4,7 +4,7 @@ import { MarbleBag, rand } from "~/utils";
 export default function Senior2023() {
   const [state, setState] = createSignal(getRandomState());
   const svg = (
-    <svg class="rand-image" height="485" width="1000">
+    <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       <rect width="16" height="16" x="269" y="25" fill={state().split("-")[2].charAt(0) === "G" ? "rgb(0, 255, 0)" : "rgb(0, 0, 255)"} />
       <rect width="16" height="16" x="300" y="25" fill={state().split("-")[2].charAt(1) === "G" ? "rgb(0, 255, 0)" : "rgb(0, 0, 255)"} />
       <rect width="16" height="16" x="330" y="25" fill={state().split("-")[2].charAt(2) === "G" ? "rgb(0, 255, 0)" : "rgb(0, 0, 255)"} />
