@@ -45,10 +45,10 @@ hr {
     max-width: none;
   }
 }
-
 @media print {
   .generate-button,
-  A {
+  A,
+  select {
     display: none;
   }
   h1 {
