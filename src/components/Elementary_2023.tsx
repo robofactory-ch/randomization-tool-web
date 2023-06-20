@@ -3,6 +3,7 @@ import { MarbleBag, rand } from "~/utils";
 import "./Randomization.css";
 export default function Elementary2023() {
   const [state, setState] = createSignal("");
+  const [mode, setMode] = createSignal(0);
   if (state() === "") getRandomState();
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
@@ -19,6 +20,18 @@ export default function Elementary2023() {
       <button class="generate-button" onClick={() => getRandomState()}>
         GENERATE
       </button>
+      <select
+        name="cellsWide"
+        onChange={(e) => {
+          setMode((_) => {
+            return e.currentTarget.value as unknown as number;
+          });
+        }}
+      >
+        <option value={0}>Normal</option>
+        <option value={1}>Whale only</option>
+        <option value={2}>Whale Fixed</option>
+      </select>
       <div class="overflow-scroll">
         <div class="rand-wrapper">
           <img class="field-image" src="/2023/Elementary-2D.jpg" alt="Elementary Game Field" width={1000} />
@@ -30,17 +43,19 @@ export default function Elementary2023() {
   );
   function getRandomState() {
     const bag = new MarbleBag(["V", "V", "X", "X"]);
-    const whale = rand(0, 3);
-
+    let whale = rand(0, 3);
+    if (mode() == 2) {
+      whale = state().split("-")[3].charAt(0) as unknown as number;
+    }
+    // const whale = 0;
     setState(`EL23-${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}-XXXX-${whale}XXX`);
   }
-}
-
-function isVisible(code: string, index: number) {
-  try {
-    const letter = code.split("-")[1].charAt(index);
-    return letter == "V";
-  } catch {}
+  function isVisible(code: string, index: number) {
+    try {
+      const letter = code.split("-")[1].charAt(index);
+      return letter == "V" && mode() != 1;
+    } catch {}
+  }
 }
 
 function getWhalePositionForCode(code: string) {
