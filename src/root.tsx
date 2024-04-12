@@ -13,9 +13,9 @@ export default function Root() {
       </Head>
       <Body>
         <A href="/">All</A>
-        <A href="/2023/elementary">Elementary</A>
-        <A href="/2023/junior">Junior</A>
-        <A href="/2023/senior">Senior</A>
+        <A href="/2024/elementary">Elementary</A>
+        <A href="/2024/junior">Junior</A>
+        <A href="/2024/senior">Senior</A>
         <Suspense>
           <ErrorBoundary>
             <Routes>
