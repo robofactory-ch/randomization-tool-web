@@ -2,7 +2,7 @@ import { createSignal } from "solid-js";
 import "./Randomization.css";
 import { MarbleBag, rand } from "~/utils";
 export default function Senior2023() {
-  const [state, setState] = createSignal(getRandomState());
+  const [state, setState] = createSignal("");
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       <rect width="32" height="32" x="355" y="20" fill={IndColor(state(), 0)} stroke="#000" />
@@ -24,7 +24,7 @@ export default function Senior2023() {
   );
   return (
     <>
-      <button class="generate-button" onClick={() => setState(getRandomState())}>
+      <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
         GENERATE
       </button>
       <div class="overflow-scroll">
@@ -39,7 +39,7 @@ export default function Senior2023() {
   function getRandomState() {
     const bag = new MarbleBag(["B", "G", "B", "G", "B", "G", "B", "G"]);
 
-    return `SN24-${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}`;
+    setState(`SN24-${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}`);
   }
 }
 
@@ -50,4 +50,18 @@ function IndColor(code: string, index: number) {
     if (letter === "B") return "blue";
     if (letter === "N") return "rgba(0,0,0,0)";
   } catch {}
+}
+
+function callWithDecreasingVelocity(func: Function, initialDelay: number, decrement: number, minDelay: number) {
+  let delay = initialDelay;
+
+  function callFuncWithDelay() {
+    func();
+    if (delay < minDelay) {
+      delay += decrement;
+      setTimeout(callFuncWithDelay, delay);
+    }
+  }
+
+  setTimeout(callFuncWithDelay, initialDelay);
 }

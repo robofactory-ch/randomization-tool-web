@@ -24,7 +24,7 @@ export default function Elementary2024() {
   );
   return (
     <>
-      <button class="generate-button" onClick={() => getRandomState()}>
+      <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
         GENERATE
       </button>
       <div class="overflow-scroll">
@@ -68,4 +68,18 @@ function isVisible(code: string, index: number) {
     const letter = code.split("-")[1].charAt(index);
     return letter == "V";
   } catch {}
+}
+
+function callWithDecreasingVelocity(func: Function, initialDelay: number, decrement: number, minDelay: number) {
+  let delay = initialDelay;
+
+  function callFuncWithDelay() {
+    func();
+    if (delay < minDelay) {
+      delay += decrement;
+      setTimeout(callFuncWithDelay, delay);
+    }
+  }
+
+  setTimeout(callFuncWithDelay, initialDelay);
 }
