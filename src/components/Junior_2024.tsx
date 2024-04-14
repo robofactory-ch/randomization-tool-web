@@ -6,12 +6,12 @@ export default function Junior2023() {
   const [state, setState] = makePersisted(createSignal(""), { name: "jr24" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
-      <rect width="16" height="16" x="225" y="443" fill={IndColor(state(), 0)} stroke="#fff" />
-      <rect width="16" height="16" x="260" y="443" fill={IndColor(state(), 1)} stroke="#fff" />
-      <rect width="16" height="16" x="297" y="443" fill={IndColor(state(), 2)} stroke="#fff" />
-      <rect width="16" height="16" x="332" y="443" fill={IndColor(state(), 3)} stroke="#fff" />
-      <rect width="16" height="16" x="370" y="443" fill={IndColor(state(), 4)} stroke="#fff" />
-      <rect width="16" height="16" x="405" y="443" fill={IndColor(state(), 5)} stroke="#fff" />
+      <rect width="16" height="16" x="225" y="443" fill={IndColor(state(), 0)} stroke="#fff" stroke-width={4} />
+      <rect width="16" height="16" x="260" y="443" fill={IndColor(state(), 1)} stroke="#fff" stroke-width={4} />
+      <rect width="16" height="16" x="297" y="443" fill={IndColor(state(), 2)} stroke="#fff" stroke-width={4} />
+      <rect width="16" height="16" x="332" y="443" fill={IndColor(state(), 3)} stroke="#fff" stroke-width={4} />
+      <rect width="16" height="16" x="370" y="443" fill={IndColor(state(), 4)} stroke="#fff" stroke-width={4} />
+      <rect width="16" height="16" x="405" y="443" fill={IndColor(state(), 5)} stroke="#fff" stroke-width={4} />
       Sorry but this browser does not support inline SVG.
     </svg>
   );

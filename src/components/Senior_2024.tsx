@@ -6,20 +6,20 @@ export default function Senior2023() {
   const [state, setState] = makePersisted(createSignal(""), { name: "sn24" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
-      <rect width="32" height="32" x="355" y="20" fill={IndColor(state(), 0)} stroke="#000" />
-      <rect width="32" height="32" x="395" y="20" fill={IndColor(state(), 1)} stroke="#000" />
+      <rect width="32" height="32" x="355" y="20" fill={IndColor(state(), 0)} stroke="#000" stroke-width={4} />
+      <rect width="32" height="32" x="395" y="20" fill={IndColor(state(), 1)} stroke="#000" stroke-width={4} />
       //
-      <rect width="32" height="32" x="570" y="440" fill={IndColor(state(), 1)} stroke="#000" />
-      <rect width="32" height="32" x="610" y="440" fill={IndColor(state(), 0)} stroke="#000" />
+      <rect width="32" height="32" x="570" y="440" fill={IndColor(state(), 1)} stroke="#000" stroke-width={4} />
+      <rect width="32" height="32" x="610" y="440" fill={IndColor(state(), 0)} stroke="#000" stroke-width={4} />
       //
-      <rect width="32" height="32" x="860" y="47" fill={IndColor(state(), 2)} stroke="#000" />
-      <rect width="32" height="32" x="860" y="85" fill={IndColor(state(), 3)} stroke="#000" />
+      <rect width="32" height="32" x="860" y="47" fill={IndColor(state(), 2)} stroke="#000" stroke-width={4} />
+      <rect width="32" height="32" x="860" y="85" fill={IndColor(state(), 3)} stroke="#000" stroke-width={4} />
       //
-      <rect width="32" height="32" x="920" y="350" fill={IndColor(state(), 4)} stroke="#000" />
-      <rect width="32" height="32" x="920" y="390" fill={IndColor(state(), 5)} stroke="#000" />
+      <rect width="32" height="32" x="920" y="350" fill={IndColor(state(), 4)} stroke="#000" stroke-width={4} />
+      <rect width="32" height="32" x="920" y="390" fill={IndColor(state(), 5)} stroke="#000" stroke-width={4} />
       //
-      <rect width="32" height="32" x="30" y="85" fill={IndColor(state(), 6)} stroke="#000" />
-      <rect width="32" height="32" x="30" y="130" fill={IndColor(state(), 7)} stroke="#000" />
+      <rect width="32" height="32" x="30" y="85" fill={IndColor(state(), 6)} stroke="#000" stroke-width={4} />
+      <rect width="32" height="32" x="30" y="130" fill={IndColor(state(), 7)} stroke="#000" stroke-width={4} />
       Sorry but this browser does not support inline SVG.
     </svg>
   );
