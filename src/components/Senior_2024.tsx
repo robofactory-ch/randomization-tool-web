@@ -34,6 +34,8 @@ export default function Senior2023() {
           {svg}
         </div>
       </div>
+
+      <p class="code">Corresponding to the starting area drawn at the start of the competition, 2 modules can be omitted (those farther away from the starting area)</p>
       <p class="code">{state()}</p>
     </>
   );
