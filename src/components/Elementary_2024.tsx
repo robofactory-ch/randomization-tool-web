@@ -24,9 +24,11 @@ export default function Elementary2024() {
   );
   return (
     <>
-      <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
-        GENERATE
-      </button>
+      <div class="button-wrapper">
+        <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
+          GENERATE
+        </button>
+      </div>
       <div class="overflow-scroll">
         <div class="rand-wrapper">
           <img class="field-image" src="/2024/Elementary-2D.jpg" alt="Elementary Game Field" width={1000} />

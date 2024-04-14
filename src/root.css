@@ -1,15 +1,19 @@
+@import url("https://use.typekit.net/wqj2ckl.css");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body {
-  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "canada-type-gibson", "Arial", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-a {
+/* a {
   margin-right: 1rem;
-}
+} */
 
 main {
   text-align: center;
@@ -17,13 +21,36 @@ main {
   margin: 0 auto;
 }
 
+.code {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+header {
+  background-color: #161026;
+  padding: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: baseline;
+}
+
+A {
+  color: #fff;
+  text-decoration: none;
+}
+
 h1 {
-  color: #335d92;
+  background-image: linear-gradient(to left, #ff9933 0%, #ffff00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: #ff9933;
   text-transform: uppercase;
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: bold;
   line-height: 1.1;
-  margin: 4rem auto;
+  margin: 2rem auto;
   max-width: 14rem;
   text-align: center;
 }
@@ -47,12 +74,13 @@ hr {
 }
 @media print {
   .generate-button,
+  header,
   A,
+  h1,
   select {
     display: none;
   }
-  h1 {
-    margin: 2rem auto;
-    font-size: 2rem;
+  hr {
+    page-break-before: always;
   }
 }

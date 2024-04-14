@@ -25,9 +25,11 @@ export default function Senior2023() {
   );
   return (
     <>
-      <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
-        GENERATE
-      </button>
+      <div class="button-wrapper">
+        <button class="generate-button" onClick={() => callWithDecreasingVelocity(getRandomState, 80, 25, 400)}>
+          GENERATE
+        </button>
+      </div>
       <div class="overflow-scroll">
         <div class="rand-wrapper">
           <img class="field-image" src="/2024/Senior-2D.jpg" alt="Senior Game Field" width={1000} />
@@ -35,7 +37,7 @@ export default function Senior2023() {
         </div>
       </div>
 
-      <p class="code">Corresponding to the starting area drawn at the start of the competition, 2 modules can be omitted (those farther away from the starting area)</p>
+      <p>Corresponding to the starting area drawn at the start of the competition, 2 modules can be omitted (those farther away from the starting area)</p>
       <p class="code">{state()}</p>
     </>
   );

@@ -12,10 +12,12 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
-        <A href="/">All</A>
-        <A href="/2024/elementary">Elementary</A>
-        <A href="/2024/junior">Junior</A>
-        <A href="/2024/senior">Senior</A>
+        <header class="header">
+          <A href="/">All</A>
+          <A href="/2024/elementary">Elementary</A>
+          <A href="/2024/junior">Junior</A>
+          <A href="/2024/senior">Senior</A>
+        </header>
         <Suspense>
           <ErrorBoundary>
             <Routes>
