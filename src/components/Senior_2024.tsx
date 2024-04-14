@@ -1,15 +1,16 @@
 import { createSignal } from "solid-js";
 import "./Randomization.css";
 import { MarbleBag, rand } from "~/utils";
+import { makePersisted } from "@solid-primitives/storage";
 export default function Senior2023() {
-  const [state, setState] = createSignal("");
+  const [state, setState] = makePersisted(createSignal(""), { name: "sn24" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       <rect width="32" height="32" x="355" y="20" fill={IndColor(state(), 0)} stroke="#000" />
       <rect width="32" height="32" x="395" y="20" fill={IndColor(state(), 1)} stroke="#000" />
       //
-      <rect width="32" height="32" x="570" y="440" fill={IndColor(state(), 0)} stroke="#000" />
-      <rect width="32" height="32" x="610" y="440" fill={IndColor(state(), 1)} stroke="#000" />
+      <rect width="32" height="32" x="570" y="440" fill={IndColor(state(), 1)} stroke="#000" />
+      <rect width="32" height="32" x="610" y="440" fill={IndColor(state(), 0)} stroke="#000" />
       //
       <rect width="32" height="32" x="860" y="47" fill={IndColor(state(), 2)} stroke="#000" />
       <rect width="32" height="32" x="860" y="85" fill={IndColor(state(), 3)} stroke="#000" />

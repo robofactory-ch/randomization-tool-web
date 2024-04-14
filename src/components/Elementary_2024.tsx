@@ -1,9 +1,9 @@
 import { createSignal } from "solid-js";
 import { MarbleBag, rand } from "~/utils";
 import "./Randomization.css";
+import { makePersisted } from "@solid-primitives/storage";
 export default function Elementary2024() {
-  const [state, setState] = createSignal("");
-  if (state() === "") getRandomState();
+  const [state, setState] = makePersisted(createSignal(""), { name: "el24" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       //
