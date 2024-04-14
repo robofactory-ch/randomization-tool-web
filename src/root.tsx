@@ -13,6 +13,7 @@ export default function Root() {
       </Head>
       <Body>
         <header class="header">
+          <img class="logo" src="https://wro.swiss/wp-content/uploads/2023/11/WRO_Switzerland_Weiss-FUeR-DUNKLEN-HINTERGRUND-300x86.png" alt="WRO Logo" />
           <A href="/">All</A>
           <A href="/2024/elementary">Elementary</A>
           <A href="/2024/junior">Junior</A>
