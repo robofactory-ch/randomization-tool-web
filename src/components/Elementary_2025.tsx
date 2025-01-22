@@ -3,7 +3,7 @@ import { MarbleBag, rand } from "~/utils";
 import "./Randomization.css";
 import { makePersisted } from "@solid-primitives/storage";
 export default function Elementary2025() {
-  const [state, setState] = makePersisted(createSignal(""), { name: "el24" });
+  const [state, setState] = makePersisted(createSignal(""), { name: "el25" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       //
