@@ -3,23 +3,14 @@ import "./Randomization.css";
 import { MarbleBag, rand } from "~/utils";
 import { makePersisted } from "@solid-primitives/storage";
 export default function Senior2025() {
-  const [state, setState] = makePersisted(createSignal(""), { name: "sn24" });
+  const [state, setState] = makePersisted(createSignal(""), { name: "sn25" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
-      <rect width="32" height="32" x="355" y="20" fill={IndColor(state(), 0)} stroke="#000" stroke-width={4} />
-      <rect width="32" height="32" x="395" y="20" fill={IndColor(state(), 1)} stroke="#000" stroke-width={4} />
-      //
-      <rect width="32" height="32" x="570" y="440" fill={IndColor(state(), 1)} stroke="#000" stroke-width={4} />
-      <rect width="32" height="32" x="610" y="440" fill={IndColor(state(), 0)} stroke="#000" stroke-width={4} />
-      //
-      <rect width="32" height="32" x="860" y="47" fill={IndColor(state(), 2)} stroke="#000" stroke-width={4} />
-      <rect width="32" height="32" x="860" y="85" fill={IndColor(state(), 3)} stroke="#000" stroke-width={4} />
-      //
-      <rect width="32" height="32" x="920" y="350" fill={IndColor(state(), 4)} stroke="#000" stroke-width={4} />
-      <rect width="32" height="32" x="920" y="390" fill={IndColor(state(), 5)} stroke="#000" stroke-width={4} />
-      //
-      <rect width="32" height="32" x="30" y="85" fill={IndColor(state(), 6)} stroke="#000" stroke-width={4} />
-      <rect width="32" height="32" x="30" y="130" fill={IndColor(state(), 7)} stroke="#000" stroke-width={4} />
+      {<rect width="32" height="32" x="630" y="30" fill={getColorFromCode(state(), 0)} stroke={"#000"} stroke-width={4} />}
+      {<rect width="32" height="32" x="480" y="30" fill={getColorFromCode(state(), 1)} stroke={"#000"} stroke-width={4} />}
+      {<rect width="32" height="32" x="630" y="70" fill={getColorFromCode(state(), 2)} stroke={"#000"} stroke-width={4} />}
+      {<rect width="32" height="32" x="480" y="70" fill={getColorFromCode(state(), 3)} stroke={"#000"} stroke-width={4} />}
+      {<rect width="16" height="32" x="450" y="200" fill={getColorFromCode(state(), 4)} stroke={"#000"} stroke-width={4} />}
       Sorry but this browser does not support inline SVG.
     </svg>
   );
@@ -42,18 +33,20 @@ export default function Senior2025() {
     </>
   );
   function getRandomState() {
-    const bag = new MarbleBag(["B", "G", "B", "G", "B", "G", "B", "G"]);
+    const bag = new MarbleBag(["R", "G", "B", "Y"]);
+    const bag2 = new MarbleBag(["R", "G", "B", "Y"]);
 
-    setState(`SN24-${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}`);
+    setState(`SN25-${bag.draw()}${bag.draw()}${bag.draw()}${bag.draw()}${bag2.draw()}`);
   }
 }
 
-function IndColor(code: string, index: number) {
+function getColorFromCode(code: string, index: number) {
   try {
     const letter = code.split("-")[1].charAt(index);
+    if (letter === "R") return "red";
     if (letter === "G") return "green";
     if (letter === "B") return "blue";
-    if (letter === "N") return "rgba(0,0,0,0)";
+    if (letter === "Y") return "yellow";
   } catch {}
 }
 
