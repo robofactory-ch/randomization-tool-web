@@ -3,7 +3,7 @@ import { Suspense } from "solid-js";
 import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from "solid-start";
 import "./root.css";
 
-import CountdownDropdown from "./components/CountdownDropdown";
+import CountdownDropdown from "~/components/CountdownDropdown";
 
 export default function Root() {
   return (
