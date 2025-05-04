@@ -3,6 +3,8 @@ import { Suspense } from "solid-js";
 import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from "solid-start";
 import "./root.css";
 
+import CountdownDropdown from "./components/CountdownDropdown";
+
 export default function Root() {
   return (
     <Html lang="en">
@@ -18,6 +20,7 @@ export default function Root() {
           <A href="/2025/elementary">Elementary</A>
           <A href="/2025/junior">Junior</A>
           <A href="/2025/senior">Senior</A>
+          <CountdownDropdown></CountdownDropdown>
         </header>
         <Suspense>
           <ErrorBoundary>
