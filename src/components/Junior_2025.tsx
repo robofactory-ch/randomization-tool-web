@@ -33,9 +33,9 @@ export default function Junior2025() {
   );
 
   function getRandomState() {
-    const ind1Bag = new MarbleBag(["R", "G", "Y", "W", "X", "X"]);
+    const ind1Bag = new MarbleBag(["R", "G", "Y", "W", "X"]);
 
-    setState(`JR25-${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}`);
+    setState(`JR25-X${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}`);
   }
 }
 
