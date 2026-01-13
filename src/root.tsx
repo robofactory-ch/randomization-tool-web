@@ -16,9 +16,9 @@ export default function Root() {
         <header class="header">
           <img class="logo" src="https://wro.swiss/wp-content/uploads/2023/11/WRO_Switzerland_Weiss-FUeR-DUNKLEN-HINTERGRUND-300x86.png" alt="WRO Logo" />
           <A href="/">All</A>
-          <A href="/2025/elementary">Elementary</A>
-          <A href="/2025/junior">Junior</A>
-          <A href="/2025/senior">Senior</A>
+          <A href="/2026/elementary">Elementary</A>
+          <A href="/2026/junior">Junior</A>
+          <A href="/2026/senior">Senior</A>
           <CountdownDropdown></CountdownDropdown>
         </header>
         <Suspense>
