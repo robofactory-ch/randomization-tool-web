@@ -1,4 +1,4 @@
-import { Title } from "solid-start";
+import { Title } from "@solidjs/meta";
 import Elementary2024 from "~/components/Elementary_2024";
 export default function Home() {
   return (

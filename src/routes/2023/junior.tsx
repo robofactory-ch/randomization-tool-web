@@ -1,4 +1,4 @@
-import { Title } from "solid-start";
+import { Title } from "@solidjs/meta";
 import Counter from "~/components/Counter";
 import Elementary2023 from "~/components/Elementary_2023";
 import Junior2023 from "~/components/Junior_2023";
