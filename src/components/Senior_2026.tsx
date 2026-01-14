@@ -5,11 +5,11 @@ import { makePersisted } from "@solid-primitives/storage";
 
 import jsPDF from "jspdf";
 export default function Senior2026() {
-  const [state, setState] = makePersisted(createSignal("SN26-XXXXXXXXXXXX"), { name: "sn26" });
+  const [state, setState] = makePersisted(createSignal("SN26-BGBGYGYYGBBB"), { name: "sn26" });
   const svg = (
     <svg class="rand-image" viewBox="0 0 1000 485" height="485" width="1000" preserveAspectRatio="xMidYMid meet">
       <For each={state().split("-")[1].split("")}>
-        {(color, index) => <rect width="32" height="32" y={120 + Math.floor(index() / 4) * 50} x={400 + (index() % 4) * 50} fill={getColorFromCode(state(), index())} stroke={"#000"} stroke-width={4} />}
+        {(color, index) => <rect data-index={index()} width="32" height="32" y={120 + Math.floor(index() / 4) * 50} x={400 + (index() % 4) * 50} fill={getColorFromCode(color)} stroke={"#000"} stroke-width={4} />}
       </For>
       Sorry but this browser does not support inline SVG.
     </svg>
@@ -44,14 +44,14 @@ export default function Senior2026() {
   }
 }
 
-function getColorFromCode(code: string, index: number) {
-  try {
-    const letter = code.split("-")[1].charAt(index);
-    if (letter === "X") return "rgba(0,0,0,0)";
-    if (letter === "G") return "green";
-    if (letter === "B") return "blue";
-    if (letter === "Y") return "yellow";
-  } catch {}
+function getColorFromCode(code: string) {
+  // try {
+  const letter = code;
+  if (letter === "X") return "black";
+  if (letter === "G") return "green";
+  if (letter === "B") return "blue";
+  if (letter === "Y") return "yellow";
+  // } catch {}
 }
 
 function callWithDecreasingVelocity(func: Function, initialDelay: number, decrement: number, minDelay: number, final_hook?: Function) {
@@ -85,8 +85,8 @@ function generatePDF(state: string) {
     if (letter === "B") color = "blue";
     if (letter === "Y") color = "yellow";
 
-    const x = 0 + (i % 4) * (38.2 + 12.4);
     const y = 0 + Math.floor(i / 4) * (38.2 + 12.4);
+    const x = 0 + Math.floor(i % 4) * (38.2 + 12.4);
 
     doc.setFillColor(color);
     doc.rect(x, y, 38.2, 38.2, "F");
