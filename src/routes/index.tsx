@@ -9,6 +9,7 @@ export default function Home() {
       <h1>Senior</h1>
       <Senior2026 />
       <hr></hr>
+
       <h1>Junior</h1>
       <Junior2026 />
       <hr></hr>
