@@ -31,7 +31,7 @@ export default function Junior2026() {
   );
 
   function getRandomState() {
-    const ind1Bag = new MarbleBag(["R", "Y", "B", "X"]);
+    const ind1Bag = new MarbleBag(["G", "R", "Y", "B", "X"]);
 
     setState(`JR26-${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}${ind1Bag.draw()}`);
   }
@@ -43,6 +43,7 @@ function getColorFromCode(code: string, index: number) {
     if (letter === "R") return "red";
     if (letter === "Y") return "yellow";
     if (letter === "B") return "blue";
+    if (letter === "G") return "green";
     if (letter === "X") return "black";
   } catch {}
 }
