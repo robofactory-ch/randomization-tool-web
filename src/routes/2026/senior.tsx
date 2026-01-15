@@ -1,11 +1,11 @@
 import { Title } from "@solidjs/meta";
-import Senior2024 from "~/components/Senior_2024";
+import Senior2026 from "~/components/Senior_2026";
 export default function Home() {
   return (
     <main>
       <Title>Senior Randomizations</Title>
       <h1>Senior</h1>
-      <Senior2024 />
+      <Senior2026 />
     </main>
   );
 }
