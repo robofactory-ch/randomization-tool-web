@@ -33,7 +33,7 @@ export default function Senior2026() {
     </>
   );
   function getRandomState() {
-    const bag = new MarbleBag(["B", "Y", "G", "B", "Y", "G", "B", "Y", "G", "B", "Y", "G", "B", "Y", "G", "B", "Y", "G", "B", "Y", "G", "B", "Y", "G"]);
+    const bag = new MarbleBag(["B", "B", "B", "B", "B", "B", "G", "G", "G", "G", "G", "G", "Y", "Y", "Y", "Y", "Y", "Y", "W", "W", "W", "W", "W", "W"]);
 
     let statestr = "";
     for (let i = 0; i < 12; i++) {
@@ -51,6 +51,7 @@ function getColorFromCode(code: string) {
   if (letter === "G") return "green";
   if (letter === "B") return "blue";
   if (letter === "Y") return "yellow";
+  if (letter === "W") return "white";
   // } catch {}
 }
 
@@ -84,6 +85,7 @@ function generatePDF(state: string) {
     if (letter === "G") color = "green";
     if (letter === "B") color = "blue";
     if (letter === "Y") color = "yellow";
+    if (letter === "W") color = "white";
 
     const y = 0 + Math.floor(i / 4) * (38.2 + 12.4);
     const x = 0 + Math.floor(i % 4) * (38.2 + 12.4);
